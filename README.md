@@ -45,3 +45,27 @@ npm run dev
 ```
 
 Copy `backend/.env.example` to `backend/.env` and fill in production keys for Gemini, Supabase, JWT, and WhatsApp Business.
+
+## Deploy
+
+### Backend on Render
+
+1. Push this repository to GitHub.
+2. In Render, create a new Blueprint or Web Service from the repository.
+3. Use `render.yaml` at the repository root.
+4. Add these environment variables in Render:
+   - `FRONTEND_ORIGIN=https://your-vercel-app.vercel.app`
+   - `GEMINI_API_KEY=your_gemini_api_key`
+   - optional Supabase and WhatsApp Business values from `backend/.env.example`
+5. After deploy, the API should respond at:
+   - `https://your-render-service.onrender.com/`
+   - `https://your-render-service.onrender.com/health`
+   - `https://your-render-service.onrender.com/docs`
+
+### Frontend on Vercel
+
+1. Import the same GitHub repository into Vercel.
+2. Keep the root directory as the repository root; `vercel.json` points Vercel to `frontend`.
+3. Add this Vercel environment variable:
+   - `VITE_API_BASE_URL=https://your-render-service.onrender.com`
+4. Deploy.

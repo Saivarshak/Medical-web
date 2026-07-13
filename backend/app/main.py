@@ -288,6 +288,16 @@ def health() -> dict[str, str]:
     return {"status": "ok", "service": settings.app_name}
 
 
+@app.get("/")
+def root() -> dict[str, str]:
+    return {
+        "service": settings.app_name,
+        "status": "running",
+        "docs": "/docs",
+        "health": "/health",
+    }
+
+
 @app.post("/upload-image")
 async def upload_image(file: UploadFile = File(...)) -> dict[str, Any]:
     if not file.content_type or not file.content_type.startswith("image/"):
@@ -385,3 +395,4 @@ async def send_whatsapp(payload: WhatsAppRequest) -> Alert:
 @app.get("/alerts")
 def alerts() -> dict[str, list[dict[str, Any]]]:
     return {"alerts": read_json_list(ALERTS_PATH)}
+
