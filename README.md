@@ -69,3 +69,15 @@ Copy `backend/.env.example` to `backend/.env` and fill in production keys for Ge
 3. Add this Vercel environment variable:
    - `VITE_API_BASE_URL=https://your-render-service.onrender.com`
 4. Deploy.
+
+### Backend on Railway Alternative
+
+1. In Railway, create a new project from the GitHub repository.
+2. Select the `backend` folder as the service root directory.
+3. Railway will use `backend/Procfile` to start FastAPI:
+   - `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+4. Add environment variables in Railway:
+   - `FRONTEND_ORIGIN=https://your-vercel-app.vercel.app`
+   - `GEMINI_API_KEY=your_gemini_api_key`
+   - optional Supabase and WhatsApp Business values from `backend/.env.example`
+5. Generate a Railway domain for the backend and use it as `VITE_API_BASE_URL` in Vercel.
