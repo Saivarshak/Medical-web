@@ -1,0 +1,58 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Admin Dashboard - RapidAid AI{% endblock %}
+
+{% block extra_css %}
+.admin-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-bottom:30px}
+.admin-card{background:#fff;padding:20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.admin-card h3{color:#4285F4}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.12)}
+th,td{padding:12px;border-bottom:1px solid #eee;text-align:left}
+th{background:#0F9D58;color:#fff}
+{% endblock %}
+
+{% block content %}
+<h1>Admin Dashboard</h1>
+
+<div class="admin-cards">
+    <div class="admin-card"><h3>Users</h3><h2>1,248</h2></div>
+    <div class="admin-card"><h3>Hospitals</h3><h2>126</h2></div>
+    <div class="admin-card"><h3>Doctors</h3><h2>482</h2></div>
+    <div class="admin-card"><h3>AI Reports</h3><h2>8,941</h2></div>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Condition</th>
+            <th>Severity</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John Doe</td>
+            <td>Skin Infection</td>
+            <td>Medium</td>
+            <td>Reviewed</td>
+            <td><a href="{% url 'medical_report' %}" class="btn">View</a></td>
+        </tr>
+        <tr>
+            <td>Sarah Smith</td>
+            <td>Burn Injury</td>
+            <td>High</td>
+            <td>Emergency Alert Sent</td>
+            <td><a href="{% url 'medical_report' %}" class="btn">View</a></td>
+        </tr>
+        <tr>
+            <td>David Lee</td>
+            <td>Eye Infection</td>
+            <td>Low</td>
+            <td>Completed</td>
+            <td><a href="{% url 'medical_report' %}" class="btn">View</a></td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

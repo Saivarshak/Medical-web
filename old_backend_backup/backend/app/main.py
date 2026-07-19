@@ -10,6 +10,8 @@ from typing import Any, Literal
 
 import httpx
 from fastapi import FastAPI, File, Form, HTTPException, Query, UploadFile
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
@@ -294,13 +296,10 @@ def health() -> dict[str, str]:
 
 
 @app.get("/")
-def root() -> dict[str, str]:
-    return {
-        "service": settings.app_name,
-        "status": "running",
-        "docs": "/docs",
-        "health": "/health",
-    }
+async def read_root():
+    return FileResponse("index.html")
+
+app.mount("/", StaticFiles(directory="/mnt/desktop/RapidAidAI", html=True), name="static")
 
 
 @app.post("/upload-image")
