@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Upload</title>
+<style>
+body{margin:0;font-family:Arial;background:#eef5f9;display:flex;justify-content:center;align-items:center;min-height:100vh}
+.box{background:#fff;padding:30px;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.12);width:600px;max-width:95%}
+h1{text-align:center;color:#0F9D58}
+.drop{border:2px dashed #4285F4;border-radius:12px;padding:50px;text-align:center;color:#666;margin:20px 0}
+input[type=file]{display:block;margin:20px auto}
+.btns{display:flex;gap:10px;justify-content:center}
+button{padding:12px 20px;border:none;border-radius:8px;color:#fff;cursor:pointer}
+.up{background:#0F9D58}.cam{background:#4285F4}
+.note{font-size:13px;color:#777;text-align:center;margin-top:15px}
+</style></head><body>
+<div class='box'>
+<h1>Upload Medical Image</h1>
+<div class='drop'>
+<p>Drag & Drop Image Here</p>
+<p>or</p>
+<input type='file' accept='.jpg,.jpeg,.png,.webp'>
+</div>
+<div class='btns'>
+<button class='up'>Analyze Image</button>
+<button class='cam'>Open Camera</button>
+</div>
+<p class='note'>Supported: JPG, JPEG, PNG, WEBP. AI assessment is not a confirmed medical diagnosis.</p>
+</div>
+</body></html>

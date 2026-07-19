@@ -232,14 +232,19 @@ Location hint: {payload.location_hint or "not provided"}
         "generationConfig": {"temperature": 0.2, "response_mime_type": "application/json"},
     }
 
-    async with httpx.AsyncClient(timeout=30) as client:
-        response = await client.post(url, json=request_body)
-    if response.status_code >= 400:
-        raise HTTPException(status_code=502, detail="Gemini Vision analysis failed")
+    try:
+        async with httpx.AsyncClient(timeout=30) as client:
+            response = await client.post(url, json=request_body)
+        response.raise_for_status()
+    except Exception:
+        return None
 
-    candidates = response.json().get("candidates", [])
-    text = candidates[0]["content"]["parts"][0].get("text", "") if candidates else ""
-    return safe_json_from_text(text)
+    try:
+        candidates = response.json().get("candidates", [])
+        text = candidates[0]["content"]["parts"][0].get("text", "") if candidates else ""
+        return safe_json_from_text(text)
+    except Exception:
+        return None
 
 
 def normalize_analysis(raw: dict[str, Any] | None, symptoms: str | None) -> dict[str, Any]:

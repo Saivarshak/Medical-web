@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RapidAid AI - Admin Dashboard</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{display:flex;background:#eef5f9}
+.sidebar{width:240px;min-height:100vh;background:#0F9D58;color:#fff;padding:20px}
+.sidebar h2{margin-bottom:25px}
+.sidebar a{display:block;color:#fff;text-decoration:none;padding:12px 0}
+.main{flex:1;padding:30px}
+h1{color:#0F9D58;margin-bottom:20px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-bottom:30px}
+.card{background:#fff;padding:20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.card h3{color:#4285F4}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.12)}
+th,td{padding:12px;border-bottom:1px solid #eee;text-align:left}
+th{background:#0F9D58;color:#fff}
+button{padding:8px 14px;background:#4285F4;color:#fff;border:none;border-radius:6px;cursor:pointer}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+<h2>RapidAid AI</h2>
+<a href="#">Dashboard</a>
+<a href="#">Users</a>
+<a href="#">Doctors</a>
+<a href="#">Hospitals</a>
+<a href="#">Medical Reports</a>
+<a href="#">Emergency Logs</a>
+<a href="#">AI Usage</a>
+<a href="#">Analytics</a>
+<a href="#">Feedback</a>
+<a href="#">Settings</a>
+</div>
+
+<div class="main">
+
+<h1>Admin Dashboard</h1>
+
+<div class="cards">
+<div class="card"><h3>Users</h3><h2>1,248</h2></div>
+<div class="card"><h3>Hospitals</h3><h2>126</h2></div>
+<div class="card"><h3>Doctors</h3><h2>482</h2></div>
+<div class="card"><h3>AI Reports</h3><h2>8,941</h2></div>
+</div>
+
+<table>
+<tr>
+<th>User</th>
+<th>Condition</th>
+<th>Severity</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td>John Doe</td>
+<td>Skin Infection</td>
+<td>Medium</td>
+<td>Reviewed</td>
+<td><button>View</button></td>
+</tr>
+
+<tr>
+<td>Sarah Smith</td>
+<td>Burn Injury</td>
+<td>High</td>
+<td>Emergency Alert Sent</td>
+<td><button>View</button></td>
+</tr>
+
+<tr>
+<td>David Lee</td>
+<td>Eye Infection</td>
+<td>Low</td>
+<td>Completed</td>
+<td><button>View</button></td>
+</tr>
+
+</table>
+
+</div>
+
+</body>
+</html>
