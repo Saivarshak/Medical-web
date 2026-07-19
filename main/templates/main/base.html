@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <title>{% block title %}RapidAid AI{% endblock %}</title>
+    <style>
+        body{margin:0;font-family:Arial;background:#f4f8fb}
+        .sidebar{position:fixed;left:0;top:0;bottom:0;width:220px;background:#0F9D58;color:#fff;padding:20px}
+        .sidebar h2{margin-top:0}
+        .sidebar a{display:block;color:#fff;text-decoration:none;padding:10px 0}
+        .sidebar a:hover{opacity:0.8}
+        .main{margin-left:240px;padding:24px}
+        .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+        .card{background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+        .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+        button, .btn{background:#4285F4;color:#fff;border:none;padding:10px 16px;border-radius:8px;text-decoration:none;display:inline-block;cursor:pointer}
+        .btn-primary{background:#4285F4}
+        {% block extra_css %}{% endblock %}
+    </style>
+</head>
+<body>
+    <div class='sidebar'>
+        <h2>RapidAid AI</h2>
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'register' %}">Register</a>
+        <a href="{% url 'dashboard' %}">Dashboard</a>
+        <a href="{% url 'upload' %}">Upload Image</a>
+        <a href="{% url 'analysis' %}">Analysis</a>
+        <a href="{% url 'medical_report' %}">Medical Report</a>
+        <a href="{% url 'hospitals' %}">Hospitals</a>
+        <a href="{% url 'emergency' %}">Emergency</a>
+        <a href="{% url 'chatbot' %}">Chatbot</a>
+        <a href="{% url 'history' %}">History</a>
+        <a href="{% url 'profile' %}">Profile</a>
+        <a href="{% url 'settings' %}">Settings</a>
+        <a href="{% url 'admin' %}">Admin</a>
+    </div>
+    <div class='main'>
+        {% block content %}{% endblock %}
+    </div>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

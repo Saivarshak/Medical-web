@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Analysis History</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#eef5f9;padding:30px}
+.container{max-width:1100px;margin:auto;background:#fff;border-radius:16px;box-shadow:0 4px 14px rgba(0,0,0,.12);padding:25px}
+h1{color:#0F9D58;margin-bottom:20px}
+.top{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+input,select{padding:10px;border:1px solid #ccc;border-radius:8px}
+button{padding:10px 16px;border:none;border-radius:8px;background:#4285F4;color:#fff;cursor:pointer}
+table{width:100%;border-collapse:collapse}
+th,td{padding:12px;border-bottom:1px solid #e5e5e5;text-align:left}
+th{background:#0F9D58;color:#fff}
+.low{color:#0F9D58;font-weight:bold}.med{color:#FB8C00;font-weight:bold}.high{color:#D93025;font-weight:bold}
+.action a{text-decoration:none;margin-right:10px;color:#4285F4}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Medical Analysis History</h1>
+<div class="top">
+<input type="text" placeholder="Search reports...">
+<select><option>All Severities</option><option>Low</option><option>Medium</option><option>High</option></select>
+<button>Search</button>
+</div>
+<table>
+<tr><th>Date</th><th>Condition</th><th>Severity</th><th>Confidence</th><th>Actions</th></tr>
+<tr><td>16-Jul-2026</td><td>Skin Inflammation</td><td class="med">Medium</td><td>78%</td><td class="action"><a href="#">View</a><a href="#">PDF</a><a href="#">Delete</a></td></tr>
+<tr><td>12-Jul-2026</td><td>Minor Burn</td><td class="low">Low</td><td>91%</td><td class="action"><a href="#">View</a><a href="#">PDF</a><a href="#">Delete</a></td></tr>
+<tr><td>05-Jul-2026</td><td>Deep Cut</td><td class="high">High</td><td>95%</td><td class="action"><a href="#">View</a><a href="#">PDF</a><a href="#">Delete</a></td></tr>
+</table>
+</div>
+</body>
+</html>

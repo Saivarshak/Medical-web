@@ -1,0 +1,51 @@
+[
+  {
+    "scan_id": "3c670400-a77e-44d5-898e-3616a7bc88ed",
+    "created_at": "2026-07-16T11:21:57.564587+00:00",
+    "severity": "Moderate",
+    "detected_issue": "Possible visible injury or medical concern detected from the provided image.",
+    "confidence": 0.62,
+    "first_aid": [
+      "Stop activity and keep the injured area still.",
+      "Apply pressure to bleeding with sterile gauze or clean cloth.",
+      "Use a cold pack wrapped in cloth for swelling, 15-20 minutes at a time.",
+      "Seek same-day medical advice if pain, swelling, or bleeding persists."
+    ],
+    "red_flags": [
+      "Difficulty breathing, confusion, fainting, or chest pain",
+      "Severe or uncontrolled bleeding",
+      "Rapidly worsening pain, swelling, fever, or spreading redness"
+    ],
+    "recommended_action": "Monitor closely and consult a clinician if symptoms worsen.",
+    "nearby_hospitals": [
+      {
+        "name": "City General Emergency Hospital",
+        "address": "24 Care Street, Central District",
+        "latitude": 17.385,
+        "longitude": 78.4867,
+        "distance_km": 1.4,
+        "emergency": true
+      },
+      {
+        "name": "Rapid Trauma & Critical Care",
+        "address": "8 LifeLine Road, Medical Zone",
+        "latitude": 17.3921,
+        "longitude": 78.4812,
+        "distance_km": 2.1,
+        "emergency": true
+      },
+      {
+        "name": "Community First Aid Clinic",
+        "address": "12 Health Avenue, North Block",
+        "latitude": 17.399,
+        "longitude": 78.49,
+        "distance_km": 3.3,
+        "emergency": false
+      }
+    ],
+    "disclaimer": "RapidAid AI provides AI-assisted guidance only and is not a substitute for professional medical diagnosis or emergency services. If symptoms are severe, worsening, or life-threatening, call local emergency services immediately.",
+    "demo_mode": true,
+    "image_id": null,
+    "symptoms": "cut on arm"
+  }
+]

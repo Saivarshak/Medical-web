@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RapidAid AI - Settings</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#eef5f9;padding:30px}
+.container{max-width:900px;margin:auto;background:#fff;padding:30px;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.12)}
+h1{text-align:center;color:#0F9D58;margin-bottom:25px}
+.section{margin-bottom:25px;padding:20px;background:#f8fbfd;border-radius:12px}
+.section h2{color:#4285F4;margin-bottom:15px;font-size:20px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #e6e6e6}
+.row:last-child{border-bottom:none}
+label{font-weight:bold}
+input[type="checkbox"]{transform:scale(1.2)}
+select,input[type="text"]{padding:10px;border:1px solid #ccc;border-radius:8px}
+button{width:100%;padding:14px;background:#0F9D58;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Settings</h1>
+
+<div class="section">
+<h2>Notifications</h2>
+<div class="row"><label>Email Notifications</label><input type="checkbox" checked></div>
+<div class="row"><label>Push Notifications</label><input type="checkbox" checked></div>
+<div class="row"><label>SMS Alerts</label><input type="checkbox"></div>
+</div>
+
+<div class="section">
+<h2>Emergency</h2>
+<div class="row"><label>Automatic Emergency Alerts</label><input type="checkbox"></div>
+<div class="row"><label>Share Live Location</label><input type="checkbox" checked></div>
+</div>
+
+<div class="section">
+<h2>Appearance</h2>
+<div class="row">
+<label>Theme</label>
+<select>
+<option>Light</option>
+<option>Dark</option>
+<option>System Default</option>
+</select>
+</div>
+<div class="row">
+<label>Language</label>
+<select>
+<option>English</option>
+<option>Telugu</option>
+<option>Hindi</option>
+</select>
+</div>
+</div>
+
+<div class="section">
+<h2>Privacy</h2>
+<div class="row"><label>Allow Image Storage</label><input type="checkbox" checked></div>
+<div class="row"><label>Allow AI Usage Analytics</label><input type="checkbox"></div>
+</div>
+
+<div class="section">
+<h2>Account</h2>
+<div class="row">
+<label>Change Password</label>
+<input type="text" placeholder="New Password">
+</div>
+</div>
+
+<button>Save Settings</button>
+
+</div>
+</body>
+</html>
